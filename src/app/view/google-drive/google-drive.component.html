@@ -1,0 +1,46 @@
+
+  <div class="col-lg-3 col-6 bar">
+    <!-- small box -->
+    <div class="small-box bg-success" (click)="logout()">
+      <div class="inner">
+        <h3>Logout</h3>
+        <p class="drive">Google Drive</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+
+    <!-- /.card-header -->
+    <div class="card-body table-responsive-md">
+      <table id="example1" class="table table-bordered table-striped  table-hover">
+        <thead class="thead-dark">
+        <tr>
+          <th>User Email Address</th>
+          <th>File Count</th>
+          <th>Size(MB)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let row of tableRows">
+          <td>{{row.userAddress}}</td>
+          <td>{{row.fileCount}}</td>
+          <td>{{row.size}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- /.card-body -->
+
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-green"><i class="fa fa-files-o"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Total Size</span>
+        <span class="info-box-number">{{sum}} GB</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
